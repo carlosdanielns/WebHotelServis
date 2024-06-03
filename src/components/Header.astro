@@ -3,122 +3,144 @@ import HeaderButton from "./HeaderButton.astro";
 ---
 
 <header>
- <nav
-    class="pt-5 flex flex-col items-center justify-between w-full text-center xl:flex-row md:flex-col"
-  >
-    <img src="https://raw.githubusercontent.com/carlosdanielns/WebHotelServis/main/Img/logo.png
-    " class="float-left" />
-    <HeaderButton href="/" class="hover:bg-blue-700 active:bg-violet-700">
-      <svg
-        slot="before"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-home"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M5 12l-2 0l9 -9l9 9l-2 0"></path><path
-          d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path
-          d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path></svg
-      >
+  <nav>
+    <div id="headerImagen" class="h-20">
+      <img
+        src="https://raw.githubusercontent.com/carlosdanielns/WebHotelServis/main/Img/logo.png"
+        class="float-left"
+      />
 
-      Inicio</HeaderButton
-    >
-    <HeaderButton href="" class="hover:bg-blue-700">
-      <svg
-        slot="before"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-apple"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z"
-        ></path><path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"></path></svg
-      >Compañia</HeaderButton
-    >
-    <HeaderButton href="/products" class="hover:bg-blue-700">
-      <svg
-        slot="before"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-assembly"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
-        ></path><path
-          d="M15.5 9.422c.312 .18 .503 .515 .5 .876v3.277c0 .364 -.197 .7 -.515 .877l-3 1.922a1 1 0 0 1 -.97 0l-3 -1.922a1 1 0 0 1 -.515 -.876v-3.278c0 -.364 .197 -.7 .514 -.877l3 -1.79c.311 -.174 .69 -.174 1 0l3 1.79h-.014z"
-        ></path></svg
+      <!-- Botón de menú (solo visible en móviles) -->
+      <button id="menu-button" class="lg:visible xl:hidden p-4 float-right">
+        <svg
+          class="w-10 h-10 text-gray-800"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="nav" class="flex flex-col w-full h-6 ">
+      <HeaderButton href="/" class="hover:bg-blue-700 active:bg-violet-700 mt-0">
+        <svg
+          slot="before"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-home"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M5 12l-2 0l9 -9l9 9l-2 0"></path><path
+            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path
+            d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path></svg
+        >
+
+        Inicio</HeaderButton
       >
-      Productos</HeaderButton
-    >
-    <HeaderButton href="" class="hover:bg-blue-700">
-      <svg
-        slot="before"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-friends"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M7 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
-          d="M5 22v-5l-1 -1v-4a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4l-1 1v5"
-        ></path><path d="M17 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
-          d="M15 22v-4h-2l2 -6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1l2 6h-2v4"
-        ></path></svg
-      >Clientes</HeaderButton
-    >
-    <HeaderButton href="" class="hover:bg-blue-700">
-      <svg
-        slot="before"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-news"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"
-        ></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path
-          d="M8 16l4 0"></path></svg
-      >Noticias</HeaderButton
-    >
-    <HeaderButton href="" class="hover:bg-blue-700">
-      <svg
-        slot="before"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-phone"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
-        ></path></svg
-      >Contacto</HeaderButton
-    >
+      <HeaderButton href="" class="hover:bg-blue-700">
+        <svg
+          slot="before"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-apple"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z"
+          ></path><path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"></path></svg
+        >Compañia</HeaderButton
+      >
+      <HeaderButton href="/products" class="hover:bg-blue-700">
+        <svg
+          slot="before"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-assembly"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+          ></path><path
+            d="M15.5 9.422c.312 .18 .503 .515 .5 .876v3.277c0 .364 -.197 .7 -.515 .877l-3 1.922a1 1 0 0 1 -.97 0l-3 -1.922a1 1 0 0 1 -.515 -.876v-3.278c0 -.364 .197 -.7 .514 -.877l3 -1.79c.311 -.174 .69 -.174 1 0l3 1.79h-.014z"
+          ></path></svg
+        >
+        Productos</HeaderButton
+      >
+      <HeaderButton href="" class="hover:bg-blue-700">
+        <svg
+          slot="before"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-friends"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M7 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
+            d="M5 22v-5l-1 -1v-4a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4l-1 1v5"
+          ></path><path d="M17 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
+            d="M15 22v-4h-2l2 -6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1l2 6h-2v4"
+          ></path></svg
+        >Clientes</HeaderButton
+      >
+      <HeaderButton href="" class="hover:bg-blue-700">
+        <svg
+          slot="before"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-news"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"
+          ></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path
+            d="M8 16l4 0"></path></svg
+        >Noticias</HeaderButton
+      >
+      <HeaderButton href="" class="hover:bg-blue-700">
+        <svg
+          slot="before"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+          ></path></svg
+        >Contacto</HeaderButton
+      >
+    </nav>
   </nav>
 </header>
